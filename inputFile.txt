@@ -1,0 +1,21 @@
+          START    100
+          LDA      LBL
+UP        LDA     #45
+TEST      LDA     @LBL
+         +LDA      LBL         .COMMENT (NEEDS TO START WITH A PERIOD)
+PPPP      TUFUE    LBL
+          LDA      LBL,X
+UP        LDA     #LBL
+BEG       LDA     #NLB
+          SUB     #BEG
+          RSUB
+LBL       WORD     50
+BEG       RESW     100
+NLB	      RESW     100
+TEST      RESB     1
+TEST2     RESB     75
+          WORD     5
+          BYTE     5
+          BYTE     1
+          WORD     1
+          END
